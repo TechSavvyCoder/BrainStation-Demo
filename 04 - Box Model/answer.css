@@ -1,0 +1,51 @@
+/* Question 01 */
+.question-01 {
+    width: 200px;
+    height: 200px;
+    padding-top: 35px;
+    margin: 32px;
+    border-width: 1px;
+}
+
+/* Question 02 */
+.question-02 {
+    width: 400px;
+    height: 255px;
+    padding: 0 25px;
+    margin: 10px 15px 50px 25px;
+    border-top-width: 35px;
+    border-bottom-width: 32px;
+}
+
+/* Question 03 */
+.question-03 {
+    width: 100px;
+    height: 333px;
+    padding: 45px 0;
+    margin: 0 20px 10px 25px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+}
+
+/* Question 04 */
+.question-04 {
+    width: 900px;
+    height: 100px;
+    padding: 15px 10px 51px 15px;
+    margin: 100px 15px 5px 5px;
+    border-right-width: 5px;
+    border-bottom-width: 10px;
+    border-left-width: 5px;
+}
+
+/* Question 05 */
+.question-05 {
+    width: 650px;
+    height: 1050px;
+    padding: 10px;
+    margin: 0 15px 5px 5px;
+    border-top-width: 25px;
+    border-right-width: 5px;
+    border-bottom-width: 15px;
+    border-left-width: 5px;
+}
