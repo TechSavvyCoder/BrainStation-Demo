@@ -25,3 +25,40 @@ In this approach, we are going to look into different methods available under `c
 - or by pressing _Command+Option+I (Mac)_ or __Control+Shift+I (Windows, Linux)_
 
 ![console](./images/console.png)
+
+- Open `scripts/debug-console.js` file & uncomment `<!-- <script src="./scripts/debug-console.js"></script> -->` under `index.html` file. Leave the other `script` tag commented.
+    - `console.log`: This method is used to log/output a message to web/browser console. Go and add `console.log("this message is printed in web console using log() method.");` to your script. Open up your console tab in browser and the message should appear.
+
+    - `console.info`: This method is used to log/output informational message to browser console. Add `console.info("user successfully logged in!");` to your script. You might notice it's not much different than `console.log`. But if you were to run this project in Firefox, you would see a blue (i) icon next to your message indicating the message is supposed to provide some information to end user.
+
+    - `console.warn`: This method is used to log/output warning message to browser console. Add `console.warn("Warning! username is not of type string");` to your script. In this case, you will find the message has some yellow-orangy color added to it to make it more prominent as a warning message.
+
+    - `console.error`: This method is used to log/output error message to browser console. Add `console.error("Error! Something went wrong! Please try again");` to your script. In this case, you will find the message has red color added to it to make it more prominent as an error message.
+
+    - `console.table`: Sometimes it is easier to see JavaScript Objects & Arrays in a user-friendly tabular format. This method is used to log/output arrays & objects to browser console in tabular format so one can easily navigate & spot data points of interest during debugging. You should already have a `locations` array & a `student` object provided in script. Let's add following piece of code to our script so we can visualize our array and object in tabular format.
+
+    ```javascript
+    console.log("Locations data (array) in tabular format: ");
+    console.table(locations);
+    console.log("Student information (object) in tabular format: ");
+    console.table(student);
+    ```
+
+    - `console.time` & `console.timeEnd`: Often times we would like to enhance the performance of our web application. In that case, it is very useful to check how long a piece of code might take to execute. These methods are designed exactly for that. Any code between `console.time('total_execution_time')` and `console.timeEnd('total_execution_time')` will be timed and we should see a timestamp in milliseconds printed after successful execution of code. _The strings inside of this method can be anything you want._ Mostly it refers to the amount of time our code took to execute. Let's add following piece of code to our script:
+
+    ```javascript
+    console.time('total_execution_time');
+
+    function add(num1, num2){
+        console.log('Addition is: ', num1 + num2);
+    }
+    function multiply(num1, num2){
+        console.log('Multiplication is: ', num1 * num2);
+    }
+    
+    add(20, 40); // call the addition function
+    multiply(3, 4); // call the multiplication function
+    console.timeEnd('total_execution_time');
+    ```
+
+    ![debug-console](./images/debug-console.png)
