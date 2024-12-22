@@ -62,3 +62,31 @@ In this approach, we are going to look into different methods available under `c
     ```
 
     ![debug-console](./images/debug-console.png)
+
+### Using Sources Panel available under Developer Tools (UI based approach)
+
+In this approach, we will take a look at debugging tools provided by all modern browsers. Use this approach when you are trying to resolve a bug or an error that is much more complicated and requires investigating the code line by line.
+
+We will switch to another part of Developer Tools in this method called _Sources Panel_. You can open it in similar way by first opening your developer tools in browser and then navigating to _Sources_.
+
+![sources](./images/sources.png)
+
+As you can see there are 3 main parts or views under Sources Panel:
+
+- File Navigator or Page Pane
+- Code Editor or Editor Pane
+- Debug Pane
+
+If you don't see File Navigator Pane, you can click _Show Navigator_ button in top-left corner as shown below.
+
+![navigator](./images/navigator.png)
+
+Let's start debugging now:
+
+- For this approach, we have purposely introduced errors in all the function calls. Our job is to use debugging using Sources Panel to deep dive into the calculator function and learn how to fix our function calls so that they return the right value.
+
+- First let's switch our script files in `index.html`. Comment `<script src="./scripts/debug-console.js"></script>` & uncomment `<script src="./scripts/debug-source.js"></script>`.
+
+- As soon as you add the script file, you will see a console error displayed in browser. We have purposely made some mistakes in our code & your job is to fix these errors by using debugging tools under Sources Panel.
+
+![console-2](./images/console-2.png)
