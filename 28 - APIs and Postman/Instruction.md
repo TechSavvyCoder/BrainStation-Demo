@@ -1,4 +1,4 @@
-# Challenge: Codealong: APIs & Postman
+# Codealong: APIs & Postman
 
 ## Introduction
 The purpose of this codealong is to use JSONPlaceholder at [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/), to consume APIs by using Postman.
