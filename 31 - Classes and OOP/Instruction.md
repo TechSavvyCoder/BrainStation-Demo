@@ -39,3 +39,18 @@ To get started, please download the starter code.
     * Within the `catch` block, log any errors from the API request using `console.error`
 3. Call the `testApiCalls` function to test the `getProducts` method is working correctly.
     * Determine if the `getProducts` method returns what you expect. If not, try to investigate where things could be going wrong and remember to ask for help if you get stuck.
+
+### Part 3: Create the Add Product functionality
+1. In `product-api.js`, create a `addProduct` method within the `ProductApi` class:
+    * Create an `async` method called `addProduct` that accepts a product object as its only parameter and sends a POST request with the product object to the `/products` endpoint of the provided Product API
+        * Remember to append the API key instance property (e.g. `this.apiKey`) to the endpoint URL's query string to authenticate the request. See the Product API documentation for more info.
+    * The `addProduct` method should `await` the request and return the newly created product from the response.
+2. In `index.js` update the `testApiCalls` function body to test the `addProduct` method:
+    * Add a new `try...catch` statement so that you can catch any errors from the API request.
+    * Within the new `try` block, call `await productApi.addProduct(<new_product_object>)` to add a product to the list of products.
+        *  See the API documentation for the object structure to follow for the new product object.
+    * Also within the new    block, verify the product has been added:
+        * Call `await productApi.getProducts()` after the `addProduct` call to retrieve the updated list of products, storing the result in a variable called `newProducts`
+        * Validate the products were retrieved successfully by logging to the console the `newProducts` variable
+        * Compare the `products` and `newProducts` variables in the console, noting the `newProducts` variable has the newly created product
+    * Within the catch block, log any errors from the API request using console.error
